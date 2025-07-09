@@ -4,10 +4,13 @@ import type { APIContext, MiddlewareNext } from "astro";
 
 export const onRequest = defineMiddleware(
   async (context: APIContext, next: MiddlewareNext) => {
+    console.log("In the middleware");
     const authInstance = await auth(context.locals.runtime.env);
     const authSession = await authInstance.api.getSession({
       headers: context.request.headers,
     });
+
+    console.log("Auth Session", authSession);
 
     if (authSession) {
       console.log("auth session user", authSession.user);
