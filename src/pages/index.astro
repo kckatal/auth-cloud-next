@@ -8,8 +8,7 @@ const authInstance = await auth(Astro.locals.runtime.env);
 const session = await authInstance.api.getSession({
   headers: Astro.request.headers,
 });
-console.log("session", session);
-console.log("USER", session?.user);
+const user = session?.user;
 
 // Redirect if already authenticated
 if (!session) {
@@ -40,17 +39,18 @@ if (!session) {
           margin: '0 auto'
         }}
       >
-        <h1 class="margin-bottom-24px">Welcome to Webflow Cloud</h1>
-        <p class="margin-bottom-24px">This is a simple test using Basic components with enhanced styling.</p>
+        <h1 class="margin-bottom-24px">Welcome to Webflow Cloud, {user?.name}</h1>
+        <p class="margin-bottom-24px">You are successfully logged in</p>
         <div>
           <Link
             button={true}
             options={{
               href: "#"
             }}
+            data-action="sign-out"
             className="button-primary"
           >
-            Get Started
+            Log out
           </Link>
         </div>
       </Block>
@@ -68,3 +68,19 @@ if (!session) {
     background-clip: text;
   }
 </style>
+
+<script>
+  import { authClient } from "../utils/auth-client";
+
+  const signOut = async () => {
+    await authClient.signOut({
+      fetchOptions: {
+        onSuccess: () => {
+          window.location.href = "/app/login";
+        },
+      },
+    });
+  };
+
+  document.querySelector("[data-action='sign-out']")?.addEventListener("click", signOut); 
+</script>
