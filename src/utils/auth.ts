@@ -3,8 +3,12 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { getDbAsync } from "../db/getDb";
 import * as schema from "../db/schema";
 
-export const auth = async (db: D1Database) => {
-  const dbInstance = await getDbAsync(db);
+export const auth = async (envMap: Cloudflare.Env) => {
+  const dbInstance = await getDbAsync(envMap.DB);
+
+  console.log("(process env) prod url", process.env.PRODUCTION_ORIGIN_URL);
+  console.log("(import env) prod url", import.meta.env.PRODUCTION_ORIGIN_URL);
+  console.log("(cf env) prod url", envMap.PRODUCTION_ORIGIN_URL);
 
   return betterAuth({
     database: drizzleAdapter(dbInstance, {
