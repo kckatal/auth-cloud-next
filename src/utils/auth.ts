@@ -21,6 +21,9 @@ export const auth = async (db: D1Database) => {
       "http://localhost:3000",
       "http://localhost:8787",
       process.env.BETTER_AUTH_URL || import.meta.env.BETTER_AUTH_URL || "",
+      process.env.PRODUCTION_ORIGIN_URL ||
+        import.meta.env.PRODUCTION_ORIGIN_URL ||
+        "",
     ],
   });
 };
