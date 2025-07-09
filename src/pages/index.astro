@@ -1,9 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Section, Container, Block, Link } from '../../devlink/_Builtin/Basic';
+import { auth } from "../utils/auth";
 
-if (!Astro.locals.session) {
-    return Astro.redirect("/app/login");
+const authInstance = await auth(Astro.locals.runtime.env);
+
+const session = await authInstance.api.getSession({
+  headers: Astro.request.headers,
+});
+console.log("session", session);
+console.log("USER", session?.user);
+
+// Redirect if already authenticated
+if (!session) {
+  return Astro.redirect("/app/login");
 }
 
 ---

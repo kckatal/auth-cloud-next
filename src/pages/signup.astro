@@ -1,9 +1,12 @@
 ---
 import { auth } from "../utils/auth";
 
-// Check if user is already authenticated
-// const authInstance = await auth();
-const session = Astro.locals.session;
+const authInstance = await auth(Astro.locals.runtime.env);
+
+const session = await authInstance.api.getSession({
+  headers: Astro.request.headers,
+});
+console.log("session", session);
 
 // Redirect if already authenticated
 if (session) {
