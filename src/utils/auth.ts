@@ -17,10 +17,9 @@ export const auth = async (envMap: Cloudflare.Env) => {
     secret: envMap.BETTER_AUTH_SECRET,
     baseUrl: envMap.BETTER_AUTH_URL,
     trustedOrigins: [
-      "http://localhost:3000",
+      "http://localhost:4321",
       "http://localhost:8787",
       envMap.BETTER_AUTH_URL || "",
-      envMap.PRODUCTION_ORIGIN_URL || "",
     ],
   });
 };
