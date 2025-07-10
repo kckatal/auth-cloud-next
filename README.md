@@ -118,9 +118,10 @@ After the project is created, click "Publish" to re-publish your Webflow site. O
 
 ### Add environment variables
 
-On the **Deployments** page, open the "Environment Variables" tab and add all the environment variables from your `.dev.vars` file, since the existing values should not have been pushed up to the repo.
+On the **Deployments** page, open the "Environment Variables" tab and add the following environment variables from your `.dev.vars` file:
 
-For the `BETTER_AUTH_URL` variable, set the value to the domain of your Webflow site (i.e. `https://auth-cloud-test.webflow.io`) as opposed to localhost.
+- `BETTER_AUTH_URL`: set the value to the domain of your Webflow site (i.e. `https://auth-cloud-test.webflow.io`) as opposed to localhost
+- `BETTER_AUTH_SECRET`: set the value to a new value by running the following command in the terminal again: `openssl rand -base64 32`. Make sure to mark it as a secret type before creating the variable in Webflow.
 
 ### Deploy the app
 
