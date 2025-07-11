@@ -107,7 +107,7 @@ First, push up any code changes made to the project to the forked remote GitHub 
 
 In your Webflow site settings, navigate to the **Webflow Cloud** tab, click "Install GitHub App", and follow the prompts so Webflow can access your forked repo.
 
-Back in the Webflow Cloud page, click the "Create New Project" button and follow the prompts accordingly to add your project name, and the location of your GitHub repo.
+Back in the Webflow Cloud page, click the "Create New Project" button and follow the prompts accordingly to add your project name, and the location of your GitHub repo. Expand the **Advanced settings** section and in the directory path input, add the subfolder name of this project: `betterauth-astro` so the Cloud app ensures to pull code from this subdirectory.
 
 When you are prompted to create an **Environment**:
 
@@ -140,6 +140,21 @@ To check a build locally before Webflow kicks off a build and deploys the latest
 ```bash
 npm run preview
 ```
+
+## Schema Changes
+
+If you modify the database schema:
+
+1. Generate new migrations:
+   ```bash
+   npm run db:generate
+   ```
+2. Apply the new migrations:
+   ```bash
+   npm run db:apply:local
+   ```
+
+Commit and push up the changes, and Webflow Cloud will handle applying the migrations to the hosted D1 instance for your Webflow Cloud app.
 
 ## 🤝 Contributing
 
