@@ -9,8 +9,7 @@
     "astro": "astro",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "db:generate": "drizzle-kit generate",
-    "db:apply:local": "wrangler d1 migrations apply DB --local",
-    "db:apply:remote": "wrangler d1 migrations apply DB --remote"
+    "db:apply:local": "wrangler d1 migrations apply DB --local"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.0",
