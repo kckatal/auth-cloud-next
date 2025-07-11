@@ -15,7 +15,7 @@ export default function Login() {
 
   useEffect(() => {
     if (!isPending && session) {
-      router.push("/app");
+      router.push("/");
     }
   }, [session, isPending, router]);
 
@@ -34,7 +34,7 @@ export default function Login() {
       if (error) {
         setError(error.message || "Login failed");
       } else if (data) {
-        router.push("/app");
+        router.push("/");
       }
     } catch (err) {
       setError("An unexpected error occurred");
@@ -56,7 +56,7 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen text-black flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
