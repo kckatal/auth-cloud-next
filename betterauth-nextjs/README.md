@@ -30,7 +30,7 @@ Make sure you have the following before running the app locally:
 
 - Fork this repo into your own repositories so you have a copy of this project to work with
 - Clone the repo down to your local machine
-- `cd auth-webapp/betterauth-nextjs`
+- `cd auth-cloud-webapp/betterauth-nextjs`
 
 ### 2. Clone the Webflow Demo Site
 
