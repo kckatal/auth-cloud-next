@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "@/devlink/global.css";
 import "./globals.css";
+import { Nav } from "@/devlink/Nav";
+import { Footer } from "@/devlink/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,7 +35,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
