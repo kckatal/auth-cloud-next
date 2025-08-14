@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import os from "os";
 
+
 export default function Home() {
   const { data: session, isPending } = useSession();
   const router = useRouter();
@@ -57,7 +58,7 @@ export default function Home() {
           <h1
             className="margin-bottom-24px"
             style={{
-              fontSize: "2.5rem",
+              fontSize: "3rem",
               fontWeight: 700,
             }}
           >
