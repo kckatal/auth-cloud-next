@@ -974,7 +974,7 @@
 }
 
 .footer-social_link {
-  width: var(--_size---1-5rem\<deleted\|variable-f3ca9317-f658-e5ae-7950-f14c04b8bdeb\>);
+  width: 1.5rem;
   transition: opacity 300ms cubic-bezier(.165, .84, .44, 1);
 }
 

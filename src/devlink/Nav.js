@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import * as _Builtin from "./_Builtin";
-import { ImageFit } from "./ImageFit";
-import { Button } from "./Button";
 import * as _utils from "./utils";
 import _styles from "./Nav.module.css";
 
@@ -66,10 +64,18 @@ export function Nav({
             href: "#",
           }}
         >
-          <ImageFit
-            imageFit="Inherit"
-            altText="__wf_reserved_inherit"
-            image="https://cdn.prod.website-files.com/6890ff2fac36779bbfd0e252/689bbaf867b64083fcf25285_Bern-colored.svg"
+          <_Builtin.Image
+            className={_utils.cx(
+              _styles,
+              "u-img-cover",
+              "inherit",
+              _activeStyleVariant
+            )}
+            width="Auto"
+            height="auto"
+            loading="lazy"
+            alt=""
+            src="https://cdn.prod.website-files.com/6890ff2fac36779bbfd0e252/689bbaf867b64083fcf25285_Bern-colored.svg"
           />
         </_Builtin.NavbarBrand>
         {navMenu ? (
@@ -628,7 +634,16 @@ export function Nav({
           className={_utils.cx(_styles, "nav-cta-wrapper", _activeStyleVariant)}
           tag="div"
         >
-          <Button buttonText="Schedule a Demo" />
+          <_Builtin.Link
+            className={_utils.cx(_styles, "btn", _activeStyleVariant)}
+            button={false}
+            block="inline"
+            options={{
+              href: "#",
+            }}
+          >
+            <_Builtin.Block tag="div">{"Schedule a Demo"}</_Builtin.Block>
+          </_Builtin.Link>
         </_Builtin.Block>
       </_Builtin.Block>
     </_Component>
