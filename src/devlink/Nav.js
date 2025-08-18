@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import * as _Builtin from "./_Builtin";
+import { Button } from "./Button";
 import * as _utils from "./utils";
 import _styles from "./Nav.module.css";
 
@@ -78,572 +79,615 @@ export function Nav({
             src="https://cdn.prod.website-files.com/6890ff2fac36779bbfd0e252/689bbaf867b64083fcf25285_Bern-colored.svg"
           />
         </_Builtin.NavbarBrand>
-        {navMenu ? (
-          <_Builtin.NavbarButton
-            className={_utils.cx(_styles, "nav-menu_btn", _activeStyleVariant)}
-            tag="div"
-          >
-            <_Builtin.Block
+        <_Builtin.Block
+          className={_utils.cx(_styles, "nav-menu_wrap", _activeStyleVariant)}
+          tag="div"
+        >
+          {navMenu ? (
+            <_Builtin.NavbarButton
               className={_utils.cx(
                 _styles,
-                "nav-menu_btn-bar",
-                "cc-top",
-                _activeStyleVariant
-              )}
-              tag="div"
-            />
-            <_Builtin.Block
-              className={_utils.cx(
-                _styles,
-                "nav-menu_btn-bar",
-                "cc-middle",
-                _activeStyleVariant
-              )}
-              tag="div"
-            />
-            <_Builtin.Block
-              className={_utils.cx(
-                _styles,
-                "nav-menu_btn-bar",
-                "cc-bottom",
-                _activeStyleVariant
-              )}
-              tag="div"
-            />
-          </_Builtin.NavbarButton>
-        ) : null}
-        {navMenu ? (
-          <_Builtin.NavbarMenu
-            className={_utils.cx(_styles, "nav-menu", _activeStyleVariant)}
-            tag="nav"
-            role="navigation"
-          >
-            <_Builtin.Block
-              className={_utils.cx(
-                _styles,
-                "nav-dropdown_overlay",
-                _activeStyleVariant
-              )}
-              tag="div"
-            />
-            <_Builtin.Block
-              className={_utils.cx(
-                _styles,
-                "nav-menu_container",
+                "nav-menu_btn",
                 _activeStyleVariant
               )}
               tag="div"
             >
-              <_Builtin.NavbarLink
-                className={_utils.cx(_styles, "nav-link", _activeStyleVariant)}
-                options={{
-                  href: "#",
-                }}
-              >
-                {"About"}
-              </_Builtin.NavbarLink>
-              <_Builtin.DropdownWrapper
+              <_Builtin.Block
                 className={_utils.cx(
                   _styles,
-                  "nav-dropdown",
+                  "nav-menu_btn-bar",
+                  "cc-top",
                   _activeStyleVariant
                 )}
                 tag="div"
-                delay={0}
-                hover={false}
-              >
-                <_Builtin.DropdownToggle
-                  className={_utils.cx(
-                    _styles,
-                    "nav-link",
-                    "cc-dropdown-btn",
-                    _activeStyleVariant
-                  )}
-                  tag="div"
-                >
-                  <_Builtin.Block tag="div">{"Product"}</_Builtin.Block>
-                  <_Builtin.DOM
-                    className={_utils.cx(
-                      _styles,
-                      "nav-dropdown_arrow",
-                      _activeStyleVariant
-                    )}
-                    tag="svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100%"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <_Builtin.DOM
-                      tag="path"
-                      d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
-                      fill="currentColor"
-                    />
-                  </_Builtin.DOM>
-                </_Builtin.DropdownToggle>
-                <_Builtin.DropdownList
-                  className={_utils.cx(
-                    _styles,
-                    "nav-dropdown_content",
-                    _activeStyleVariant
-                  )}
-                  tag="nav"
-                >
-                  <_Builtin.DropdownLink
-                    className={_utils.cx(
-                      _styles,
-                      "nav-link",
-                      "cc-dropdown-link",
-                      _activeStyleVariant
-                    )}
-                    options={{
-                      href: "#",
-                    }}
-                  >
-                    {"Link 1"}
-                  </_Builtin.DropdownLink>
-                  <_Builtin.DropdownLink
-                    className={_utils.cx(
-                      _styles,
-                      "nav-link",
-                      "cc-dropdown-link",
-                      _activeStyleVariant
-                    )}
-                    options={{
-                      href: "#",
-                    }}
-                  >
-                    {"Link 2"}
-                  </_Builtin.DropdownLink>
-                  <_Builtin.DropdownLink
-                    className={_utils.cx(
-                      _styles,
-                      "nav-link",
-                      "cc-dropdown-link",
-                      _activeStyleVariant
-                    )}
-                    options={{
-                      href: "#",
-                    }}
-                  >
-                    {"Link 3"}
-                  </_Builtin.DropdownLink>
-                </_Builtin.DropdownList>
-              </_Builtin.DropdownWrapper>
-              <_Builtin.DropdownWrapper
+              />
+              <_Builtin.Block
                 className={_utils.cx(
                   _styles,
-                  "nav-dropdown",
-                  "cc-mega",
+                  "nav-menu_btn-bar",
+                  "cc-middle",
                   _activeStyleVariant
                 )}
                 tag="div"
-                delay={0}
-                hover={false}
+              />
+              <_Builtin.Block
+                className={_utils.cx(
+                  _styles,
+                  "nav-menu_btn-bar",
+                  "cc-bottom",
+                  _activeStyleVariant
+                )}
+                tag="div"
+              />
+            </_Builtin.NavbarButton>
+          ) : null}
+          {navMenu ? (
+            <_Builtin.NavbarMenu
+              className={_utils.cx(_styles, "nav-menu", _activeStyleVariant)}
+              tag="nav"
+              role="navigation"
+            >
+              <_Builtin.Block
+                className={_utils.cx(
+                  _styles,
+                  "nav-dropdown_overlay",
+                  _activeStyleVariant
+                )}
+                tag="div"
+              />
+              <_Builtin.Block
+                className={_utils.cx(
+                  _styles,
+                  "nav-menu_container",
+                  _activeStyleVariant
+                )}
+                tag="div"
               >
-                <_Builtin.DropdownToggle
+                <_Builtin.NavbarLink
                   className={_utils.cx(
                     _styles,
                     "nav-link",
-                    "cc-dropdown-btn",
+                    _activeStyleVariant
+                  )}
+                  options={{
+                    href: "#",
+                  }}
+                >
+                  {"Experts"}
+                </_Builtin.NavbarLink>
+                <_Builtin.NavbarLink
+                  className={_utils.cx(
+                    _styles,
+                    "nav-link",
+                    _activeStyleVariant
+                  )}
+                  options={{
+                    href: "#",
+                  }}
+                >
+                  {"Feedback"}
+                </_Builtin.NavbarLink>
+                <_Builtin.NavbarLink
+                  className={_utils.cx(
+                    _styles,
+                    "nav-link",
+                    _activeStyleVariant
+                  )}
+                  options={{
+                    href: "/app",
+                  }}
+                >
+                  {"Login"}
+                </_Builtin.NavbarLink>
+                <_Builtin.DropdownWrapper
+                  className={_utils.cx(
+                    _styles,
+                    "nav-dropdown",
                     _activeStyleVariant
                   )}
                   tag="div"
+                  delay={0}
+                  hover={false}
                 >
-                  <_Builtin.Block tag="div">{"Resources"}</_Builtin.Block>
-                  <_Builtin.DOM
+                  <_Builtin.DropdownToggle
                     className={_utils.cx(
                       _styles,
-                      "nav-dropdown_arrow",
-                      _activeStyleVariant
-                    )}
-                    tag="svg"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100%"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <_Builtin.DOM
-                      tag="path"
-                      d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
-                      fill="currentColor"
-                    />
-                  </_Builtin.DOM>
-                </_Builtin.DropdownToggle>
-                <_Builtin.DropdownList
-                  className={_utils.cx(
-                    _styles,
-                    "nav-dropdown_content",
-                    "cc-mega",
-                    _activeStyleVariant
-                  )}
-                  tag="nav"
-                >
-                  <_Builtin.Block
-                    className={_utils.cx(
-                      _styles,
-                      "container",
+                      "nav-link",
+                      "cc-dropdown-btn",
                       _activeStyleVariant
                     )}
                     tag="div"
                   >
+                    <_Builtin.Block tag="div">{"Product"}</_Builtin.Block>
+                    <_Builtin.DOM
+                      className={_utils.cx(
+                        _styles,
+                        "nav-dropdown_arrow",
+                        _activeStyleVariant
+                      )}
+                      tag="svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="100%"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <_Builtin.DOM
+                        tag="path"
+                        d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
+                        fill="currentColor"
+                      />
+                    </_Builtin.DOM>
+                  </_Builtin.DropdownToggle>
+                  <_Builtin.DropdownList
+                    className={_utils.cx(
+                      _styles,
+                      "nav-dropdown_content",
+                      _activeStyleVariant
+                    )}
+                    tag="nav"
+                  >
+                    <_Builtin.DropdownLink
+                      className={_utils.cx(
+                        _styles,
+                        "nav-link",
+                        "cc-dropdown-link",
+                        _activeStyleVariant
+                      )}
+                      options={{
+                        href: "#",
+                      }}
+                    >
+                      {"Link 1"}
+                    </_Builtin.DropdownLink>
+                    <_Builtin.DropdownLink
+                      className={_utils.cx(
+                        _styles,
+                        "nav-link",
+                        "cc-dropdown-link",
+                        _activeStyleVariant
+                      )}
+                      options={{
+                        href: "#",
+                      }}
+                    >
+                      {"Link 2"}
+                    </_Builtin.DropdownLink>
+                    <_Builtin.DropdownLink
+                      className={_utils.cx(
+                        _styles,
+                        "nav-link",
+                        "cc-dropdown-link",
+                        _activeStyleVariant
+                      )}
+                      options={{
+                        href: "#",
+                      }}
+                    >
+                      {"Link 3"}
+                    </_Builtin.DropdownLink>
+                  </_Builtin.DropdownList>
+                </_Builtin.DropdownWrapper>
+                <_Builtin.DropdownWrapper
+                  className={_utils.cx(
+                    _styles,
+                    "nav-dropdown",
+                    "cc-mega",
+                    _activeStyleVariant
+                  )}
+                  tag="div"
+                  delay={0}
+                  hover={false}
+                >
+                  <_Builtin.DropdownToggle
+                    className={_utils.cx(
+                      _styles,
+                      "nav-link",
+                      "cc-dropdown-btn",
+                      _activeStyleVariant
+                    )}
+                    tag="div"
+                  >
+                    <_Builtin.Block tag="div">{"Resources"}</_Builtin.Block>
+                    <_Builtin.DOM
+                      className={_utils.cx(
+                        _styles,
+                        "nav-dropdown_arrow",
+                        _activeStyleVariant
+                      )}
+                      tag="svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="100%"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <_Builtin.DOM
+                        tag="path"
+                        d="M16.293 9.29297L12 13.586L7.70697 9.29297L6.29297 10.707L12 16.414L17.707 10.707L16.293 9.29297Z"
+                        fill="currentColor"
+                      />
+                    </_Builtin.DOM>
+                  </_Builtin.DropdownToggle>
+                  <_Builtin.DropdownList
+                    className={_utils.cx(
+                      _styles,
+                      "nav-dropdown_content",
+                      "cc-mega",
+                      _activeStyleVariant
+                    )}
+                    tag="nav"
+                  >
                     <_Builtin.Block
-                      className={_utils.cx(_styles, "row", _activeStyleVariant)}
+                      className={_utils.cx(
+                        _styles,
+                        "container",
+                        _activeStyleVariant
+                      )}
                       tag="div"
                     >
                       <_Builtin.Block
                         className={_utils.cx(
                           _styles,
-                          "col",
-                          "col-lg-3",
-                          "col-md-6",
-                          "col-sm-12",
+                          "row",
                           _activeStyleVariant
                         )}
                         tag="div"
                       >
-                        <_Builtin.Heading
+                        <_Builtin.Block
                           className={_utils.cx(
                             _styles,
-                            "eyebrow",
+                            "col",
+                            "col-lg-3",
+                            "col-md-6",
+                            "col-sm-12",
                             _activeStyleVariant
                           )}
-                          tag="h2"
+                          tag="div"
                         >
-                          {"Category"}
-                        </_Builtin.Heading>
-                        <_Builtin.List
-                          className={_utils.cx(
-                            _styles,
-                            "u-mb-0",
-                            _activeStyleVariant
-                          )}
-                          tag="ul"
-                          unstyled={true}
-                        >
-                          <_Builtin.ListItem>
-                            <_Builtin.DropdownLink
-                              className={_utils.cx(
-                                _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
-                                _activeStyleVariant
-                              )}
-                              options={{
-                                href: "#",
-                              }}
-                            >
-                              {"Link 1"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                          <_Builtin.ListItem>
-                            <_Builtin.DropdownLink
-                              className={_utils.cx(
-                                _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
-                                _activeStyleVariant
-                              )}
-                              options={{
-                                href: "#",
-                              }}
-                            >
-                              {"Link 2"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                          <_Builtin.ListItem
+                          <_Builtin.Heading
+                            className={_utils.cx(
+                              _styles,
+                              "eyebrow",
+                              _activeStyleVariant
+                            )}
+                            tag="h2"
+                          >
+                            {"Category"}
+                          </_Builtin.Heading>
+                          <_Builtin.List
                             className={_utils.cx(
                               _styles,
                               "u-mb-0",
                               _activeStyleVariant
                             )}
+                            tag="ul"
+                            unstyled={true}
                           >
-                            <_Builtin.DropdownLink
+                            <_Builtin.ListItem>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 1"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                            <_Builtin.ListItem>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 2"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                            <_Builtin.ListItem
                               className={_utils.cx(
                                 _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
+                                "u-mb-0",
                                 _activeStyleVariant
                               )}
-                              options={{
-                                href: "#",
-                              }}
                             >
-                              {"Link 3"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                        </_Builtin.List>
-                      </_Builtin.Block>
-                      <_Builtin.Block
-                        className={_utils.cx(
-                          _styles,
-                          "col",
-                          "col-lg-3",
-                          "col-md-6",
-                          "col-sm-12",
-                          _activeStyleVariant
-                        )}
-                        tag="div"
-                      >
-                        <_Builtin.Heading
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 3"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                          </_Builtin.List>
+                        </_Builtin.Block>
+                        <_Builtin.Block
                           className={_utils.cx(
                             _styles,
-                            "eyebrow",
+                            "col",
+                            "col-lg-3",
+                            "col-md-6",
+                            "col-sm-12",
                             _activeStyleVariant
                           )}
-                          tag="h2"
+                          tag="div"
                         >
-                          {"Category"}
-                        </_Builtin.Heading>
-                        <_Builtin.List
-                          className={_utils.cx(
-                            _styles,
-                            "u-mb-0",
-                            _activeStyleVariant
-                          )}
-                          tag="ul"
-                          unstyled={true}
-                        >
-                          <_Builtin.ListItem>
-                            <_Builtin.DropdownLink
-                              className={_utils.cx(
-                                _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
-                                _activeStyleVariant
-                              )}
-                              options={{
-                                href: "#",
-                              }}
-                            >
-                              {"Link 1"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                          <_Builtin.ListItem>
-                            <_Builtin.DropdownLink
-                              className={_utils.cx(
-                                _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
-                                _activeStyleVariant
-                              )}
-                              options={{
-                                href: "#",
-                              }}
-                            >
-                              {"Link 2"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                          <_Builtin.ListItem
+                          <_Builtin.Heading
+                            className={_utils.cx(
+                              _styles,
+                              "eyebrow",
+                              _activeStyleVariant
+                            )}
+                            tag="h2"
+                          >
+                            {"Category"}
+                          </_Builtin.Heading>
+                          <_Builtin.List
                             className={_utils.cx(
                               _styles,
                               "u-mb-0",
                               _activeStyleVariant
                             )}
+                            tag="ul"
+                            unstyled={true}
                           >
-                            <_Builtin.DropdownLink
+                            <_Builtin.ListItem>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 1"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                            <_Builtin.ListItem>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 2"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                            <_Builtin.ListItem
                               className={_utils.cx(
                                 _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
+                                "u-mb-0",
                                 _activeStyleVariant
                               )}
-                              options={{
-                                href: "#",
-                              }}
                             >
-                              {"Link 3"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                        </_Builtin.List>
-                      </_Builtin.Block>
-                      <_Builtin.Block
-                        className={_utils.cx(
-                          _styles,
-                          "col",
-                          "col-lg-3",
-                          "col-md-6",
-                          "col-sm-12",
-                          _activeStyleVariant
-                        )}
-                        tag="div"
-                      >
-                        <_Builtin.Heading
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 3"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                          </_Builtin.List>
+                        </_Builtin.Block>
+                        <_Builtin.Block
                           className={_utils.cx(
                             _styles,
-                            "eyebrow",
+                            "col",
+                            "col-lg-3",
+                            "col-md-6",
+                            "col-sm-12",
                             _activeStyleVariant
                           )}
-                          tag="h2"
+                          tag="div"
                         >
-                          {"Category"}
-                        </_Builtin.Heading>
-                        <_Builtin.List
-                          className={_utils.cx(
-                            _styles,
-                            "u-mb-0",
-                            _activeStyleVariant
-                          )}
-                          tag="ul"
-                          unstyled={true}
-                        >
-                          <_Builtin.ListItem>
-                            <_Builtin.DropdownLink
-                              className={_utils.cx(
-                                _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
-                                _activeStyleVariant
-                              )}
-                              options={{
-                                href: "#",
-                              }}
-                            >
-                              {"Link 1"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                          <_Builtin.ListItem>
-                            <_Builtin.DropdownLink
-                              className={_utils.cx(
-                                _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
-                                _activeStyleVariant
-                              )}
-                              options={{
-                                href: "#",
-                              }}
-                            >
-                              {"Link 2"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                          <_Builtin.ListItem
+                          <_Builtin.Heading
+                            className={_utils.cx(
+                              _styles,
+                              "eyebrow",
+                              _activeStyleVariant
+                            )}
+                            tag="h2"
+                          >
+                            {"Category"}
+                          </_Builtin.Heading>
+                          <_Builtin.List
                             className={_utils.cx(
                               _styles,
                               "u-mb-0",
                               _activeStyleVariant
                             )}
+                            tag="ul"
+                            unstyled={true}
                           >
-                            <_Builtin.DropdownLink
+                            <_Builtin.ListItem>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 1"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                            <_Builtin.ListItem>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 2"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                            <_Builtin.ListItem
                               className={_utils.cx(
                                 _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
+                                "u-mb-0",
                                 _activeStyleVariant
                               )}
-                              options={{
-                                href: "#",
-                              }}
                             >
-                              {"Link 3"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                        </_Builtin.List>
-                      </_Builtin.Block>
-                      <_Builtin.Block
-                        className={_utils.cx(
-                          _styles,
-                          "col",
-                          "col-lg-3",
-                          "col-md-6",
-                          "col-sm-12",
-                          _activeStyleVariant
-                        )}
-                        tag="div"
-                      >
-                        <_Builtin.Heading
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 3"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                          </_Builtin.List>
+                        </_Builtin.Block>
+                        <_Builtin.Block
                           className={_utils.cx(
                             _styles,
-                            "eyebrow",
+                            "col",
+                            "col-lg-3",
+                            "col-md-6",
+                            "col-sm-12",
                             _activeStyleVariant
                           )}
-                          tag="h2"
+                          tag="div"
                         >
-                          {"Category"}
-                        </_Builtin.Heading>
-                        <_Builtin.List
-                          className={_utils.cx(
-                            _styles,
-                            "u-mb-0",
-                            _activeStyleVariant
-                          )}
-                          tag="ul"
-                          unstyled={true}
-                        >
-                          <_Builtin.ListItem>
-                            <_Builtin.DropdownLink
-                              className={_utils.cx(
-                                _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
-                                _activeStyleVariant
-                              )}
-                              options={{
-                                href: "#",
-                              }}
-                            >
-                              {"Link 1"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                          <_Builtin.ListItem>
-                            <_Builtin.DropdownLink
-                              className={_utils.cx(
-                                _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
-                                _activeStyleVariant
-                              )}
-                              options={{
-                                href: "#",
-                              }}
-                            >
-                              {"Link 2"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                          <_Builtin.ListItem
+                          <_Builtin.Heading
+                            className={_utils.cx(
+                              _styles,
+                              "eyebrow",
+                              _activeStyleVariant
+                            )}
+                            tag="h2"
+                          >
+                            {"Category"}
+                          </_Builtin.Heading>
+                          <_Builtin.List
                             className={_utils.cx(
                               _styles,
                               "u-mb-0",
                               _activeStyleVariant
                             )}
+                            tag="ul"
+                            unstyled={true}
                           >
-                            <_Builtin.DropdownLink
+                            <_Builtin.ListItem>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 1"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                            <_Builtin.ListItem>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 2"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                            <_Builtin.ListItem
                               className={_utils.cx(
                                 _styles,
-                                "nav-link",
-                                "cc-dropdown-link",
+                                "u-mb-0",
                                 _activeStyleVariant
                               )}
-                              options={{
-                                href: "#",
-                              }}
                             >
-                              {"Link 3"}
-                            </_Builtin.DropdownLink>
-                          </_Builtin.ListItem>
-                        </_Builtin.List>
+                              <_Builtin.DropdownLink
+                                className={_utils.cx(
+                                  _styles,
+                                  "nav-link",
+                                  "cc-dropdown-link",
+                                  _activeStyleVariant
+                                )}
+                                options={{
+                                  href: "#",
+                                }}
+                              >
+                                {"Link 3"}
+                              </_Builtin.DropdownLink>
+                            </_Builtin.ListItem>
+                          </_Builtin.List>
+                        </_Builtin.Block>
                       </_Builtin.Block>
                     </_Builtin.Block>
-                  </_Builtin.Block>
-                </_Builtin.DropdownList>
-              </_Builtin.DropdownWrapper>
-            </_Builtin.Block>
-          </_Builtin.NavbarMenu>
-        ) : null}
-        <_Builtin.Block
-          className={_utils.cx(_styles, "nav-cta-wrapper", _activeStyleVariant)}
-          tag="div"
-        >
-          <_Builtin.Link
-            className={_utils.cx(_styles, "btn", _activeStyleVariant)}
-            button={false}
-            block="inline"
-            options={{
-              href: "#",
-            }}
+                  </_Builtin.DropdownList>
+                </_Builtin.DropdownWrapper>
+              </_Builtin.Block>
+            </_Builtin.NavbarMenu>
+          ) : null}
+          <_Builtin.Block
+            className={_utils.cx(
+              _styles,
+              "nav-cta-wrapper",
+              _activeStyleVariant
+            )}
+            tag="div"
           >
-            <_Builtin.Block tag="div">{"Schedule a Demo"}</_Builtin.Block>
-          </_Builtin.Link>
+            <Button
+              buttonText="Book a Demo"
+              iconIconRight={true}
+              iconIconRightClass="ph ph-arrow-down"
+              buttonLink={{
+                href: "#problem",
+              }}
+            />
+          </_Builtin.Block>
         </_Builtin.Block>
       </_Builtin.Block>
     </_Component>
