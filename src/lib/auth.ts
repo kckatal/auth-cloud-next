@@ -22,6 +22,8 @@ export const createAuth = async () => {
     trustedOrigins: [
       "http://localhost:3000",
       "http://localhost:8787",
+      "https://www.petesbigbets.com/",
+      "https://petesbigbets.com/",
       env?.BETTER_AUTH_URL ?? "",
     ],
   });
