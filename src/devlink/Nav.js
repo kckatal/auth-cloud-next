@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import * as _Builtin from "./_Builtin";
-import { Button } from "./Button";
 import * as _utils from "./utils";
 import _styles from "./Nav.module.css";
 
@@ -679,14 +678,7 @@ export function Nav({
             )}
             tag="div"
           >
-            <Button
-              buttonText="Book a Demo"
-              iconIconRight={true}
-              iconIconRightClass="ph ph-arrow-down"
-              buttonLink={{
-                href: "#problem",
-              }}
-            />
+
           </_Builtin.Block>
         </_Builtin.Block>
       </_Builtin.Block>
